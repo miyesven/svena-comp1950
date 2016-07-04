@@ -26,6 +26,430 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <style>
+	/*EMBEDDED NORMALIZE.CSS*/
+	/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+	/**
+	 * 1. Change the default font family in all browsers (opinionated).
+	 * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+	 */
+
+	html {
+	  font-family: sans-serif; /* 1 */
+	}
+
+	/**
+	 * Remove the margin in all browsers (opinionated).
+	 */
+
+	body {
+	  margin: 0;
+	}
+
+	/* HTML5 display definitions
+	   ========================================================================== */
+
+	/**
+	 * Add the correct display in IE 9-.
+	 * 1. Add the correct display in Edge, IE, and Firefox.
+	 * 2. Add the correct display in IE.
+	 */
+
+	article,
+	aside,
+	details, /* 1 */
+	figcaption,
+	figure,
+	footer,
+	header,
+	main, /* 2 */
+	menu,
+	nav,
+	section,
+	summary { /* 1 */
+	  display: block;
+	}
+
+	/**
+	 * Add the correct display in IE 9-.
+	 */
+
+	audio,
+	canvas,
+	progress,
+	video {
+	  display: inline-block;
+	}
+
+	/**
+	 * Add the correct display in iOS 4-7.
+	 */
+
+	audio:not([controls]) {
+	  display: none;
+	  height: 0;
+	}
+
+	/**
+	 * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+	 */
+
+	progress {
+	  vertical-align: baseline;
+	}
+
+	/**
+	 * Add the correct display in IE 10-.
+	 * 1. Add the correct display in IE.
+	 */
+
+	template, /* 1 */
+	[hidden] {
+	  display: none;
+	}
+
+	/* Links
+	   ========================================================================== */
+
+	/**
+	 * 1. Remove the gray background on active links in IE 10.
+	 * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+	 */
+
+	a {
+	  background-color: transparent; /* 1 */
+	  -webkit-text-decoration-skip: objects; /* 2 */
+	}
+
+	/**
+	 * Remove the outline on focused links when they are also active or hovered
+	 * in all browsers (opinionated).
+	 */
+
+	a:active,
+	a:hover {
+	  outline-width: 0;
+	}
+
+	/* Text-level semantics
+	   ========================================================================== */
+
+	/**
+	 * 1. Remove the bottom border in Firefox 39-.
+	 * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+	 */
+
+	abbr[title] {
+	  border-bottom: none; /* 1 */
+	  text-decoration: underline; /* 2 */
+	  text-decoration: underline dotted; /* 2 */
+	}
+
+	/**
+	 * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+	 */
+
+	b,
+	strong {
+	  font-weight: inherit;
+	}
+
+	/**
+	 * Add the correct font weight in Chrome, Edge, and Safari.
+	 */
+
+	b,
+	strong {
+	  font-weight: bolder;
+	}
+
+	/**
+	 * Add the correct font style in Android 4.3-.
+	 */
+
+	dfn {
+	  font-style: italic;
+	}
+
+	/**
+	 * Correct the font size and margin on `h1` elements within `section` and
+	 * `article` contexts in Chrome, Firefox, and Safari.
+	 */
+
+	h1 {
+	  font-size: 2em;
+	  margin: 0.67em 0;
+	}
+
+	/**
+	 * Add the correct background and color in IE 9-.
+	 */
+
+	mark {
+	  background-color: #ff0;
+	  color: #000;
+	}
+
+	/**
+	 * Add the correct font size in all browsers.
+	 */
+
+	small {
+	  font-size: 80%;
+	}
+
+	/**
+	 * Prevent `sub` and `sup` elements from affecting the line height in
+	 * all browsers.
+	 */
+
+	sub,
+	sup {
+	  font-size: 75%;
+	  line-height: 0;
+	  position: relative;
+	  vertical-align: baseline;
+	}
+
+	sub {
+	  bottom: -0.25em;
+	}
+
+	sup {
+	  top: -0.5em;
+	}
+
+	/* Embedded content
+	   ========================================================================== */
+
+	/**
+	 * Remove the border on images inside links in IE 10-.
+	 */
+
+	img {
+	  border-style: none;
+	}
+
+	/**
+	 * Hide the overflow in IE.
+	 */
+
+	svg:not(:root) {
+	  overflow: hidden;
+	}
+
+	/* Grouping content
+	   ========================================================================== */
+
+	/**
+	 * 1. Correct the inheritance and scaling of font size in all browsers.
+	 * 2. Correct the odd `em` font sizing in all browsers.
+	 */
+
+	code,
+	kbd,
+	pre,
+	samp {
+	  font-family: monospace, monospace; /* 1 */
+	  font-size: 1em; /* 2 */
+	}
+
+	/**
+	 * Add the correct margin in IE 8.
+	 */
+
+	figure {
+	  margin: 1em 40px;
+	}
+
+	/**
+	 * 1. Add the correct box sizing in Firefox.
+	 * 2. Show the overflow in Edge and IE.
+	 */
+
+	hr {
+	  box-sizing: content-box; /* 1 */
+	  height: 0; /* 1 */
+	  overflow: visible; /* 2 */
+	}
+
+	/* Forms
+	   ========================================================================== */
+
+	/**
+	 * 1. Change font properties to `inherit` in all browsers (opinionated).
+	 * 2. Remove the margin in Firefox and Safari.
+	 */
+
+	button,
+	input,
+	select,
+	textarea {
+	  font: inherit; /* 1 */
+	  margin: 0; /* 2 */
+	}
+
+	/**
+	 * Restore the font weight unset by the previous rule.
+	 */
+
+	optgroup {
+	  font-weight: bold;
+	}
+
+	/**
+	 * Show the overflow in IE.
+	 * 1. Show the overflow in Edge.
+	 */
+
+	button,
+	input { /* 1 */
+	  overflow: visible;
+	}
+
+	/**
+	 * Remove the inheritance of text transform in Edge, Firefox, and IE.
+	 * 1. Remove the inheritance of text transform in Firefox.
+	 */
+
+	button,
+	select { /* 1 */
+	  text-transform: none;
+	}
+
+	/**
+	 * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+	 *    controls in Android 4.
+	 * 2. Correct the inability to style clickable types in iOS and Safari.
+	 */
+
+	button,
+	html [type="button"], /* 1 */
+	[type="reset"],
+	[type="submit"] {
+	  -webkit-appearance: button; /* 2 */
+	}
+
+	/**
+	 * Remove the inner border and padding in Firefox.
+	 */
+
+	button::-moz-focus-inner,
+	[type="button"]::-moz-focus-inner,
+	[type="reset"]::-moz-focus-inner,
+	[type="submit"]::-moz-focus-inner {
+	  border-style: none;
+	  padding: 0;
+	}
+
+	/**
+	 * Restore the focus styles unset by the previous rule.
+	 */
+
+	button:-moz-focusring,
+	[type="button"]:-moz-focusring,
+	[type="reset"]:-moz-focusring,
+	[type="submit"]:-moz-focusring {
+	  outline: 1px dotted ButtonText;
+	}
+
+	/**
+	 * Change the border, margin, and padding in all browsers (opinionated).
+	 */
+
+	fieldset {
+	  border: 1px solid #c0c0c0;
+	  margin: 0 2px;
+	  padding: 0.35em 0.625em 0.75em;
+	}
+
+	/**
+	 * 1. Correct the text wrapping in Edge and IE.
+	 * 2. Correct the color inheritance from `fieldset` elements in IE.
+	 * 3. Remove the padding so developers are not caught out when they zero out
+	 *    `fieldset` elements in all browsers.
+	 */
+
+	legend {
+	  box-sizing: border-box; /* 1 */
+	  color: inherit; /* 2 */
+	  display: table; /* 1 */
+	  max-width: 100%; /* 1 */
+	  padding: 0; /* 3 */
+	  white-space: normal; /* 1 */
+	}
+
+	/**
+	 * Remove the default vertical scrollbar in IE.
+	 */
+
+	textarea {
+	  overflow: auto;
+	}
+
+	/**
+	 * 1. Add the correct box sizing in IE 10-.
+	 * 2. Remove the padding in IE 10-.
+	 */
+
+	[type="checkbox"],
+	[type="radio"] {
+	  box-sizing: border-box; /* 1 */
+	  padding: 0; /* 2 */
+	}
+
+	/**
+	 * Correct the cursor style of increment and decrement buttons in Chrome.
+	 */
+
+	[type="number"]::-webkit-inner-spin-button,
+	[type="number"]::-webkit-outer-spin-button {
+	  height: auto;
+	}
+
+	/**
+	 * 1. Correct the odd appearance in Chrome and Safari.
+	 * 2. Correct the outline style in Safari.
+	 */
+
+	[type="search"] {
+	  -webkit-appearance: textfield; /* 1 */
+	  outline-offset: -2px; /* 2 */
+	}
+
+	/**
+	 * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+	 */
+
+	[type="search"]::-webkit-search-cancel-button,
+	[type="search"]::-webkit-search-decoration {
+	  -webkit-appearance: none;
+	}
+
+	/**
+	 * Correct the text style of placeholders in Chrome, Edge, and Safari.
+	 */
+
+	::-webkit-input-placeholder {
+	  color: inherit;
+	  opacity: 0.54;
+	}
+
+	/**
+	 * 1. Correct the inability to style clickable types in iOS and Safari.
+	 * 2. Change font properties to `inherit` in Safari.
+	 */
+
+	::-webkit-file-upload-button {
+	  -webkit-appearance: button; /* 1 */
+	  font: inherit; /* 2 */
+	}
+
+	/*NORMALIZE ENDS*/
+</style>
+
+<style>	
+	/*OUR OWN CSS*/
 	/*i can do this as an external page later if you guys prefer - this way is better for quick edits i think. 
 						also: the colors are sourced from the image ryan posted on github. */
 	/*COLOR PALETTE FROM PICTACULOUS.COM
@@ -65,7 +489,6 @@
 		width:100%;
 		 
 		background-color:#919EAE;
-		font-size:90%;
 		font-family:arial,sans-serif;
 		
 		padding:0;
@@ -99,7 +522,6 @@
 	main p{
 		font-size:1.2em;
 		margin:20px;
-		padding:20px;
 	}
 	
 	ul {
@@ -111,14 +533,29 @@
 	#center-col{
 		margin-left:15%;
 		margin-top:60px;
-		padding:10px 5px;
+		padding:5px 20px;
+		padding-bottom:100px;
 		width:70%;
 		
 		background-color:azure;
 	}
 	
-	#center-col h2{
+	#center-col p{
+		padding-bottom:15px;
+	}
+	#center-col h2, h6{
 		text-align:center;
+	}
+	
+	#center-col h6{
+		color:#06a0f9;
+		font-size:1.5em;
+		font-weight:700;
+		padding:8px 10px;
+		background-image:url("tech-background.jpg");
+	}
+	#center-col textarea{
+		margin-left:5%;
 	}
 	
 	#left-col{
@@ -160,7 +597,7 @@
 
 	#right-col #myNavbar .nav-pills li a{ 
 		padding:10px 5px;
-		font-size:1.05em;
+		font-size:0.9em;
 		text-align:center;
 	}
 	#left-col #final{
@@ -170,7 +607,7 @@
 	
 </style>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="0">
+<body data-spy="scroll" data-target=".navbar" data-offset="30">
 	<header>
 		<img src="logo.png"/>
 	</header>
@@ -202,27 +639,262 @@
 					<div>
 						<div class="collapse navbar-collapse" id="myNavbar">
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#section1">Section 1</a>
-								</li>
-								<li><a href="#section2">Section 2</a>
-								</li>
-								<li><a href="#section3">Section 3</a>
-								</li>
+								<li><a href="#section1">Agenda</a></li>
+								<li><a href="#section2">Hypertext Markup Language</a></li>
+								<li><a href="#section3">HTML Created</a></li>
+								<li><a href="#section4">HTML on the Loose! </a></li>
+								<li><a href="#section5">Fixing the problem</a></li>
+								<li><a href="#section6">XHTML 2</a></li>
+								<li><a href="#section7">HTML5 </a></li>
+								<li><a href="#section8">Semantic Coding</a></li>
+								<li><a href="#section9">CSS Fundamentals</a></li>
+								<li><a href="#section10">Summary</a></li>
+								<li><a href="#section11">Homework</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 		</nav>
 			
-			<div id="center-col">
+		<div id="center-col">
 			<!--column 1-->
-			<h2 id="section1">column 1: central content</h2>
-				<p class="container-fluid">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-				
-				<p id="section2" class="container-fluid">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-				
-				<p id="section3" class="container-fluid">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-					</div>
+			<h2 id="section1">Lecture Two: HTML5</h2>
+			<p class="container-fluid">
+				<h6>Agenda</h6>
+				<ul>
+				<li>Quiz #1</li>
+				<li>Markup Languages: HTML, XHTML, HTML5</li>
+				<li>HTML5 semantics</li>	
+				<li>HTML5 features</li>
+				<li>CSS review</li>
+				</ul>
+			</p>
+			
+			<p id="section2" class="container-fluid">
+				<h6>Hypertext Markup Language</h6>
+				It all starts here in one form or another: HTML 
+				<ul>
+					<li>What started as a language defined by SGML (Standard Generalized Markup Language), HTML is used to mark up billions of pages, making up the bulk of the web.</li>
+					<li>From a common origin, 3 distinct version have emerged: 
+						<ol>
+							<li>HTML 1 - 4.01: This was developed in rapid succession in the 1990's</li>
+							<li>XHTML 1, 1.1, 2: A stricter version, created as an answer to the loose development of HTML</li>
+							<li>HTML5 - a reaction to the draconian ruleset proposed by the W3C for the future of MLs beyond XHTML 1.1</li>
+						</ol>
+					</li>
+				</ul>
+			</p>
+							
+			<p id="section3" class="container-fluid">
+				<h6>HTML Created </h6>
+				Late 1991, Tim Berners-Lee releases the first iteration of what would become HTML 2.0 (there was no real 1.0+)
+				<br/>•HTML was a language created at the dawn of the Web, using SGML (Standard Generalized Markup Language) as a template
+				<br />•Over the next decade, various additions, improvements and changes are introduced
+				<br />•The last official specification was the service release of HTML 4.01 in December 1999
+				<br>•Initially used for documents and a place for the technically inclined, the web did not have the international pervasiveness it does today
+				<br>•Most developers were new to the language and there were no real classes in it
+				<br>•People had to learn as they went along
+				<br>•A lot of early sites are poorly designed
+				<h4>HTML 4.01 template</h4>
+				<textarea style="width:90%;height:170px;" rows="10" cols="50">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+				   "http://www.w3.org/TR/html4/loose.dtd"&gt;
+	&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;&lt;/title&gt;
+		&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+				</textarea>
+			</p>
+			
+			<p id="section4" class="container-fluid">
+				<h6>HTML on the Loose! </h6>
+				<br>Despite it's reputation as a loose language, HTML 4.01 can be written strict just like XHTML and HTML5 can
+				<br>•The problem was not entirely with the language or the authors. It was with the browsers.
+				<br>•Browser manufacturers created User Agents that would read code, interpret it, fix any mistakes and render a page, without any visible errors.
+				<br>•It was this that led to coders exploiting problems in browsers and creating pages that broke when new specs or updated User Agents (browsers) came out
+				<br>•Okay, so now there is a problem. Millions of pages are being produced with sloppy code because the UAs let it happen
+				<br>•The web is becoming filled with Tag Soup that makes it hard to index, with search tools having to trust things like META keywords and descriptions
+				<br>•A better solution is required: Get Strict!
+			</p>
+			
+			<p id="section5" class="container-fluid">
+				<h6> Attempting to fix the problem</h6>
+				Moving on to XHTML1
+				<br> •After years of HTML development, 4.01 became the "Last Official Release"
+				<br>•The Web Working Group had taken a look at XML (Extensible Markup Language) and liked what they saw: a requirement for valid markup in order for an XML application to work
+				<br>•Why not take the ruleset from XML (lower case attributes, everything in quotes, close every tag) and apply it to HTML? Yay!
+				<br>•That should fix everything, right?
+				<br>•Coding wasn't actually fixed by the introduction of XHTML. Fixes were suggested by the specification, but most browsers would render the page anyway.
+				<br>•This is because 99% of XHTML pages are reporting their MIME type as: text/html
+				<br>•To get pages to render using the appropriate DOCTYPE of XHTML, pages would have to be delivered with the MIME type of application/xhtml+xml
+				<br>•Using that MIME type, however, brought with it a rather dire proviso:
+				<br>•The error handling specified in XHTML 1.1 meant all errors will cause the browser to cease rendering
+				<br>•Yes, you read that correctly. That means any error will throw an warning to the user and the page will not be shown
+				<br>•Try to imagine the Web actually working in this way
+				<br>•Why was this done? Because the developers of XHTML wanted to force strict coding rules so that the Web could be seen as a giant application. Reliable code on every page meant you could use the data anywhere
+			</p>
+			
+			<p id="section6" class="container-fluid">
+			 <h6> XHTML 2</h6>
+			<br>Between 2002 and 2006, a significant amount of development was attempted for XHTML2
+			<br>•An early decision was to abandon backward compatibility with XHTML1 and HTML4.x leading to significant controversy
+			<br>•What does that mean? "abandon backward compatibility"? ◦Deprecated tags would no longer work
+			<br>◦All "old" code would have to be updated if you wanted to deliver XHTML
+			<br>◦Browsers would have even more work to do when rendering pages
+
+			<br>•Some additional changes: ◦Forms will now be controlled by XForms, a new system that allows for error checking, preformatted input fields and more
+			<br>◦DOM events will be replaced with XML Events - a system for registering and handling events within an XML document, requiring very strict coding standards
+			<br>◦Lists for Navigation can be created with a new n1 tag
+			<br>◦Any element can have href or src attributes, allowing for links and/or image replacement
+
+			<br>•Some of the more contentious issues were split out into modules to be worked on by the W3C XHTML Working Group
+			<br>•At one point, a question was asked: ◦Shouldn't we be taking into account the billions of pages that are already out there, make the upgrading part easy and focus on the kinds of things people are actually doing today?
+
+			<br>•Maybe not exactly that, but close
+			<br>•A vote was called and the motion was defeated. But the people who thought it was a good idea wanted to move forward
+			<br>•As a result - they created the WHATWG (Web Hypertext Application Technology Working Group) and began working on a competing specification, which was originally called Web Applications 1.0
+			</p>
+			
+			<p id="section7" class="container-fluid">
+				<h6>HTML5 </h6>
+				<br>Arising out of the morass
+				<br>•HTML5 was born out of frustration with languishing XHTML2 development
+				<br>•The last official spec of XHTML had come in 2000 and by 2005, there was little forward movement, with the development bogged down in committees and problems reaching consensus
+				<br>•There were two distinct camps: Strict and Non Strict (overly simplified terms)
+				<br>•After a series of decisions against a more forgiving, backward compatible version, a number of HTML Working Group members created their own group: WHATWG
+				<br>•After 3 years, Web Applications 1.0 gained considerable momentum when Mozilla, Apple and Opera joined the Working Group and requested that it become part of the W3C's HTML Working Group 
+				<br>•In 2007, the W3C HTML working group adopted the development, renamed it HTML5 (a successor to HTML 4.01) and released a Public Working Draft in 2008
+				<br>•As of today, HTML5 is still a Draft Recommendation expected to cease accepting new proposals in late 2014.
+				<br>•As of October 28, 2014, HTML5 is the official W3C recommendation
+				<br>•Broswer vendors are now expected to fully support HTML5 in new browsers they produce.
+				<br>•Not all browser vendors are up to date yet, and, much more notably, not all internet users will be using new, HTML5 compliant browsers
+				<br>•Support for some of HTML5s features is already available in several browsers, so if applied with care, developers may begin writing HTML5 now.			
+				<h4>HTML 5 template</h4>
+				<textarea style="width:90%;height:170px;" rows="10" cols="50">&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;&lt;/title&gt;
+		&lt;meta charset="utf-8" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+				</textarea>
+			</p>
+			
+			<p id="section8" class="container-fluid">
+				<h6>HTML5: Enhanced Semantic Coding</h6>
+				It is crucial for all HTML content to be semantically marked up. This is how browsers, search engines, and screen readers make sense of online content.
+				<br>
+				HTML5 provides more than just adjustments to the markup, there are new, powerfully semantic elements:
+			<ul>
+				<li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">&lt;section&gt;</a></code> is a tag representing a document or application section. in general, if you are planning to use a heading, start a new <code>section</code>. a <code>section</code> must contain a heading, and may contain <code>article</code>(s), possibly <code>aside</code>s or even sub-<code>section</code>s</li>
+				<li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">&lt;article&gt;</a></code> is an independent piece of content in a document (it could stand alone if removed from the page). an <code>article</code> might be a blog post, forum thread, news story, collection of product information, etc</li>
+				<li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">&lt;aside&gt;</a></code> is for content "only slightly" related to the main page content. <code>aside</code>s fill the role of a sidebar. if the content could be removed without reducing the meaning of the main content of the HTML document, then use an <code>aside</code></li>
+				<li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></code> and <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">&lt;footer&gt;</a></code> are for the header or footer of a page</li>
+				<li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">&lt;nav&gt;</a></code> represents an area for navigation</li>
+				<li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">&lt;main&gt;</a></code> used for containing content that is focused on the central topic of the page. this content is usually unique to the page, and not shared by other pages (main will usually NOT contain navigations, footers, sidebars, etc)</li>
+				<li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">&lt;figure&gt;</a></code> will likely contain an <code>img</code> or graphic. self-contained content (could usually be removed from the page and stand on its own). allows for captioning of embedded content like an image graphic or video. if you want to associate a caption, add a <code>figcaption</code> child</li>
+				<li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">&lt;figcaption&gt;</a></code> used as first or last child of <code>figure</code> to define the caption or legend for a figure</li>
+			</ul>	
+			These represent some big changes in HTML, allowing for more flexibility in coding and specifying content. Many of these will replace and reduce the need for many <code>div</code> tags. eg: instead of the typical <code>&lt;div id="header"&gt;</code>, use <code>&lt;header&gt;</code>.
+			</p>
+			
+			<p id="section9" class="container-fluid">
+			<h6>CSS Fundamentals</h6>
+			<ul>
+			<li>a CSS rule defines what the HTML should look like and how it should behave in the browser window</li>
+			<li>parts of a CSS rule:
+
+			<ul>
+				<li><strong>selector {property: value;}</strong> = rule</li>
+				<li><strong>selector</strong> - can be HTML, class or ID</li>
+
+				<li><strong>{property: value;}</strong> = declaration</li>
+				<li><strong>properties</strong> identify what is being defined: font-family, font-weight, font-size, color, etc.</li>
+				<li><strong>values</strong> are assigned to define the nature of the property: verdana, bold, 16pt, green, etc.</li>
+			</ul>
+			</li>
+			<li>three basic types of CSS selectors
+			<ol>
+
+				<li><strong>HTML selector</strong> - the HTML selector (P, H3, etc.) is used to redefine how the tag displays:<br />
+				<strong>p {font: bold 16pt verdana;}</strong>
+				</li><li><strong>Class</strong> - a "free agent" rule that can be applied to any tag at your discretion:<br />
+				<strong>.bigText {font: bold 48pt verdana;}</strong>
+				</li><li><strong>ID</strong> - work like class selectors, but usually apply to only one element on the page:<br />
+
+				<strong>#navbar {position: absolute; margin-top: 20px;}</strong>
+			</li>
+			</ol>
+			</li>
+
+			<li>rules are setup in one of three places:
+			<ul>
+				<li><strong>in an HTML tag:</strong> in the body of the document to affect one tag only; this is called an <strong>inline</strong> rule</li>
+				<li><strong>in the head of a document</strong> to affect an entire web page; called an <strong>embedded</strong> rule</li>
+
+				<li><strong>in an external document</strong> that is then linked or imported into your HTML page(s); called an <strong>external</strong> rule</li>
+			</ul>
+			</li>
+			</ul>
+			</p>
+			
+			<p id="section10" class="container-fluid">
+				<h6> Summary</h6>
+				Using HTML5
+				<ol>
+					<li>Create more semantic documents by using HTML5 tags such as header, footer, etc. </li>
+					<li>Use <a href="http://html5test.com/">HTML5Test</a> with several different browsers to determine what HTML5 is or isn't currently supported.</li>
+					<li>Apply the <a href="https://github.com/aFarkas/html5shiv">HTML5shiv</a> to ensure Internet Explorer browsers will recognize and style the new HTML5 tags</li>
+					<li><a href="http://validator.w3.org/">Validate your code</a></li>
+
+				</ol>
+				HTML5 Resources
+				<ul>
+					<li><a href="http://www.w3.org/TR/2014/REC-html5-20141028/">W3C HTML5 Complete Reference</a> </li>
+					<li><a href="http://www.w3schools.com/html/html5_new_elements.asp">New semantic/structural HTML5 Tags</a></li>
+					<li><a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">HTML5 flowchart</a></li>
+					<li><a href="http://www.sitepoint.com/html-5-snapshot-2009/">Sitepoint's</a> HTML 5 snapshot</li>
+					<li>Learn more about specific HTML5 tags:
+						<ul>
+							<li><a href="http://html5doctor.com/html5-forms-input-types/">form inputs</a> - several 'intelligent' form inputs can pre-validate form field data before the form can be submitted to the server</li>
+							<li><a href="http://www.htmlgoodies.com/primers/html/article.php/3920991/HTML5-Primer-How-To-Use-the-Audio-Tag.htm">audio</a> - embed audio files in various formats and let the client browser automatically choose the preferred format</li>
+							<li><a href="http://www.html5rocks.com/en/tutorials/video/basics/">video</a> - embed video in various formats and let the client browser automatically choose the preferred format</li>
+							<li><a href="http://diveintohtml5.info/canvas.html">canvas</a> - 2D drawing in real time, in response to user interactions. requires javascript, may not be good for accessibility</li>
+							<li><a href="http://tutorials.jenkov.com/svg/index.html">scalable vector graphics (SVG)</a> display vector graphics. unlike <code>canvas</code>, SVGs are static (they cannot change in real time)</li>
+							
+							<li><a href="http://www.w3.org/Math/">MathML</a> provides semantic tags for rendering complex mathematical formulas </li>
+							<li><a href="http://dglobaltech.com/html5-geolocation-api-demo-and-example/">geolocation</a> - determine, with the user's permission, the approximate geographic location of the client</li>
+							<li><a href="http://css-tricks.com/html5-progress-element/">progress bar</a>, <a href="http://css-tricks.com/html5-meter-element/">meter</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time">time</a> - new widgets useful for additional semantics and the styling of common kinds of data</li>
+						</ul>
+					</li>
+				</ul>
+					CSS Fundamentals
+					<br>
+					Be sure you are comfortable with the fundamentals of CSS:
+					<ul>
+						<li>how to apply CSS inline, embedded, and externally</li>
+						<li>how write CSS rules: <code>selector { property:value; } </code></li>
+						<li>how to use pseudoclass, id and class selectors</li>
+						<li>create <a href="http://jigsaw.w3.org/css-validator/">valid CSS code</a></li>
+					</ul>
+			</p>		
+					
+			<p id="section11" class="container-fluid">
+					<h6>Homework</h6>
+					<ul>
+						<li>due by midnight before the next class</li>
+					<!--	<li>homework specifications will be available here  upon release</li>
+						<li>-->
+					</ul>
+					<a href="/_shared_resources_1950/downloads/comp1950_homework02.pdf">Download the homework</a>		
+			</p>
+
+		</div>
 		<!--column 1 end-->
 	</main>
 	<footer>
@@ -275,3 +947,4 @@
 </body>
 
 </html>
+
