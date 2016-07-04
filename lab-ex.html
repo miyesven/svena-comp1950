@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--Svena Yu 
+Lab-ex.html 
+
+Linked(supposedly) to the lectures.html page
+-->
+
+<html>
+
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<title>proto layout</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="bcit comp 1950 alternate page design">
+	<meta name="author" content="Maggie McGee">
+	<!-- add your name here as you edit anything :)
+                    	{Added a <script> and bootstrap 
+						Edited the CSS
+							left center right responsive
+						Edited content
+						} by Svena
+                    
+                    -->
+	<!--[if lt IE 9]>
+                    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+                    <![endif]-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<style>
+	/*i can do this as an external page later if you guys prefer - this way is better for quick edits i think. 
+						also: the colors are sourced from the image ryan posted on github. */
+	/*COLOR PALETTE FROM PICTACULOUS.COM
+	HEADER'S DARK GREEN COLOR: #011932
+	HEADER'S LIGHT BLUE COLOR: #06a0f9
+	DARK PURPLE :#180456;
+	CENTER COL BACKGROUND-COLOR: azure;
+	
+	/*STANDARD CSS*/
+	header{ /*this is a version with a sticky header and footer, we can change this if you don't like the style!*/
+		   background-image:url("tech-background.jpg");
+		   background-position:right center;
+		   background-repeat:no-repeat;
+		   background-color:#011932;
+		   width:100%;
+		   font-family:arial,sans-serif;
+		   z-index:100;  
+		   
+		   position:fixed;
+	  
+	}
+	
+	header img{
+		margin:0;
+		padding:5px 0px;
+		width:20%;
+		height:60px;
+		opacity:0.9;
+		margin-left:15%;
+	}
+	
+	a:hover{
+		text-decoration:none;
+	}
+	
+	body{
+		width:100%;
+		 
+		background-color:#919EAE;
+		font-size:90%;
+		font-family:arial,sans-serif;
+		
+		padding:0;
+		margin:0;
+		
+		position:relative; /*do not delete this- this is for scrollspy*/
+	}
+	
+	footer {
+		position:relative;
+		width:100%;
+		padding:0;
+		margin-top:10px;
+		background-color:#180456;
+		z-index:100;
+		left:0;
+	}	
+		
+	footer p {
+		padding:.6em 16px;
+		font-family:arial,sans-serif;
+		text-align:center;
+		font-size:12px;
+		color:#F2F0F3;	
+	}
+	
+	main{	
+		display:inline-block;
+	}
+	
+	main p{
+		font-size:1.2em;
+		margin:20px;
+		padding:20px;
+	}
+	
+	ul {
+		list-style-type: none;
+		margin:0;
+		padding:0;
+		
+	}
+	#center-col{
+		margin-left:15%;
+		margin-top:60px;
+		padding:10px 5px;
+		width:70%;
+		
+		background-color:azure;
+	}
+	
+	#center-col h2{
+		text-align:center;
+	}
+	
+	#left-col{
+		width:15%;
+		position:fixed;
+		top:60px;
+		
+		padding:5px 10px;
+		text-align:center;
+	}
+	
+	#left-col ul{
+		margin:5px 0px;
+		border: 2px black solid;
+	}
+	
+	#left-col ul li{
+		border-bottom: 2px black solid;
+	}
+	
+	#left-col ul li{
+		padding:5px 10px;
+		background-color:#011932;
+	}
+	
+	#left-col ul li:hover{
+		background-color:darkgray;
+		color:lightblue;
+	}
+	
+	#right-col{
+		position:fixed;
+		top:60px;
+		margin-left:85%;
+		padding:5px 0.3%;
+		text-align:center;
+		height:auto;
+	}
+
+	#right-col #myNavbar .nav-pills li a{ 
+		padding:10px 5px;
+		font-size:1.05em;
+		text-align:center;
+	}
+	#left-col #final{
+		border-bottom:none;
+	}
+	
+	
+</style>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="0">
+	<header>
+		<img src="logo.png"/>
+	</header>
+	<main>
+		<!--column 2-->
+		<div id="left-col">
+			<h4>Lectures</h4>
+			<aside>
+				<ul>
+					<li id="active"><a href="">HTML5</a> </li>
+					<li><a href="">Introduction to CSS3</a></li>
+					<li><a href="">CSS3 Techniques</a></li>
+					<li><a href="">Responsive Design </a></li>
+					<li id="final"><a href="">JavaScript</a> </li>
+				</ul>
+			</aside>
+		</div>
+		<!--left column end-->
+		
+		<nav id="right-col" class="navbar">
+			<h4> Navigation </h4>
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span> 
+						</button>
+					</div>
+					<div>
+						<div class="collapse navbar-collapse" id="myNavbar">
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#section1">Section 1</a>
+								</li>
+								<li><a href="#section2">Section 2</a>
+								</li>
+								<li><a href="#section3">Section 3</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</nav>
+			
+			<div id="center-col">
+			<!--column 1-->
+			<h2 id="section1">column 1: central content</h2>
+				<p class="container-fluid">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+				
+				<p id="section2" class="container-fluid">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+				
+				<p id="section3" class="container-fluid">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+					</div>
+		<!--column 1 end-->
+	</main>
+	<footer>
+		<p>bcit comp 1950| maggie mcgee, ryan belandres, svena yu.
+			</p>
+	</footer>
+	<script>
+	$('body').scrollspy({target: ".navbar"});
+		
+	
+	//copied from stackOverflow
+	//this is to shrink the header when we scroll to the content
+	$(function(){
+		$('header').data('size','big');
+	});
+
+	$(window).scroll(function(){
+		if($(document).scrollTop() > 0)
+		{
+			if($('header').data('size') == 'big')
+			{
+				$('header').data('size','small');
+				$('header').stop().animate({
+					height:'40px'
+				},300);
+				$('header img').stop().animate({
+					width:'12%',
+					height:'100%'
+				},200);
+			}
+		}
+		else
+		{
+			if($('header').data('size') == 'small')
+			{
+				$('header').data('size','big');
+				$('header').stop().animate({
+					height:'60px'
+				},300);
+				$('header img').stop().animate({
+					width:'20%',
+					height:'auto'
+				},200);
+			}  
+		}
+	});
+
+
+	</script>
+</body>
+
+</html>
