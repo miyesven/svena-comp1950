@@ -5,8 +5,8 @@ It might be that we need something like url("svena-comp1950/logo.png") for it to
 
 #####Embedded CSS note
 Also, the normalize.css is really really long, so I made it like this:
-<style> ...normalize.css...</style>
-<style>...our own style</style>
+&lt;style&gt; ...normalize.css...&lt;/style&gt;
+&lt;style&gt;...our own style&lt;/style&gt;
 so we could fold up the nomalize part.
 I'll be doing the same with our media queries
 ie, one tag for each media query (we have two in total to keep things simple)
