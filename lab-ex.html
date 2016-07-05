@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--Svena Yu 
-Lab-ex.html 
-
-Linked(supposedly) to the lectures.html page
--->
-
+<!--maggie mcgee, comp 1950 - final group assignment -->
 <html>
 
 <head>
@@ -31,6 +26,430 @@ Linked(supposedly) to the lectures.html page
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <style>
+	/*EMBEDDED NORMALIZE.CSS*/
+	/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+	/**
+	 * 1. Change the default font family in all browsers (opinionated).
+	 * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+	 */
+
+	html {
+	  font-family: sans-serif; /* 1 */
+	}
+
+	/**
+	 * Remove the margin in all browsers (opinionated).
+	 */
+
+	body {
+	  margin: 0;
+	}
+
+	/* HTML5 display definitions
+	   ========================================================================== */
+
+	/**
+	 * Add the correct display in IE 9-.
+	 * 1. Add the correct display in Edge, IE, and Firefox.
+	 * 2. Add the correct display in IE.
+	 */
+
+	article,
+	aside,
+	details, /* 1 */
+	figcaption,
+	figure,
+	footer,
+	header,
+	main, /* 2 */
+	menu,
+	nav,
+	section,
+	summary { /* 1 */
+	  display: block;
+	}
+
+	/**
+	 * Add the correct display in IE 9-.
+	 */
+
+	audio,
+	canvas,
+	progress,
+	video {
+	  display: inline-block;
+	}
+
+	/**
+	 * Add the correct display in iOS 4-7.
+	 */
+
+	audio:not([controls]) {
+	  display: none;
+	  height: 0;
+	}
+
+	/**
+	 * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+	 */
+
+	progress {
+	  vertical-align: baseline;
+	}
+
+	/**
+	 * Add the correct display in IE 10-.
+	 * 1. Add the correct display in IE.
+	 */
+
+	template, /* 1 */
+	[hidden] {
+	  display: none;
+	}
+
+	/* Links
+	   ========================================================================== */
+
+	/**
+	 * 1. Remove the gray background on active links in IE 10.
+	 * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+	 */
+
+	a {
+	  background-color: transparent; /* 1 */
+	  -webkit-text-decoration-skip: objects; /* 2 */
+	}
+
+	/**
+	 * Remove the outline on focused links when they are also active or hovered
+	 * in all browsers (opinionated).
+	 */
+
+	a:active,
+	a:hover {
+	  outline-width: 0;
+	}
+
+	/* Text-level semantics
+	   ========================================================================== */
+
+	/**
+	 * 1. Remove the bottom border in Firefox 39-.
+	 * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+	 */
+
+	abbr[title] {
+	  border-bottom: none; /* 1 */
+	  text-decoration: underline; /* 2 */
+	  text-decoration: underline dotted; /* 2 */
+	}
+
+	/**
+	 * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+	 */
+
+	b,
+	strong {
+	  font-weight: inherit;
+	}
+
+	/**
+	 * Add the correct font weight in Chrome, Edge, and Safari.
+	 */
+
+	b,
+	strong {
+	  font-weight: bolder;
+	}
+
+	/**
+	 * Add the correct font style in Android 4.3-.
+	 */
+
+	dfn {
+	  font-style: italic;
+	}
+
+	/**
+	 * Correct the font size and margin on `h1` elements within `section` and
+	 * `article` contexts in Chrome, Firefox, and Safari.
+	 */
+
+	h1 {
+	  font-size: 2em;
+	  margin: 0.67em 0;
+	}
+
+	/**
+	 * Add the correct background and color in IE 9-.
+	 */
+
+	mark {
+	  background-color: #ff0;
+	  color: #000;
+	}
+
+	/**
+	 * Add the correct font size in all browsers.
+	 */
+
+	small {
+	  font-size: 80%;
+	}
+
+	/**
+	 * Prevent `sub` and `sup` elements from affecting the line height in
+	 * all browsers.
+	 */
+
+	sub,
+	sup {
+	  font-size: 75%;
+	  line-height: 0;
+	  position: relative;
+	  vertical-align: baseline;
+	}
+
+	sub {
+	  bottom: -0.25em;
+	}
+
+	sup {
+	  top: -0.5em;
+	}
+
+	/* Embedded content
+	   ========================================================================== */
+
+	/**
+	 * Remove the border on images inside links in IE 10-.
+	 */
+
+	img {
+	  border-style: none;
+	}
+
+	/**
+	 * Hide the overflow in IE.
+	 */
+
+	svg:not(:root) {
+	  overflow: hidden;
+	}
+
+	/* Grouping content
+	   ========================================================================== */
+
+	/**
+	 * 1. Correct the inheritance and scaling of font size in all browsers.
+	 * 2. Correct the odd `em` font sizing in all browsers.
+	 */
+
+	code,
+	kbd,
+	pre,
+	samp {
+	  font-family: monospace, monospace; /* 1 */
+	  font-size: 1em; /* 2 */
+	}
+
+	/**
+	 * Add the correct margin in IE 8.
+	 */
+
+	figure {
+	  margin: 1em 40px;
+	}
+
+	/**
+	 * 1. Add the correct box sizing in Firefox.
+	 * 2. Show the overflow in Edge and IE.
+	 */
+
+	hr {
+	  box-sizing: content-box; /* 1 */
+	  height: 0; /* 1 */
+	  overflow: visible; /* 2 */
+	}
+
+	/* Forms
+	   ========================================================================== */
+
+	/**
+	 * 1. Change font properties to `inherit` in all browsers (opinionated).
+	 * 2. Remove the margin in Firefox and Safari.
+	 */
+
+	button,
+	input,
+	select,
+	textarea {
+	  font: inherit; /* 1 */
+	  margin: 0; /* 2 */
+	}
+
+	/**
+	 * Restore the font weight unset by the previous rule.
+	 */
+
+	optgroup {
+	  font-weight: bold;
+	}
+
+	/**
+	 * Show the overflow in IE.
+	 * 1. Show the overflow in Edge.
+	 */
+
+	button,
+	input { /* 1 */
+	  overflow: visible;
+	}
+
+	/**
+	 * Remove the inheritance of text transform in Edge, Firefox, and IE.
+	 * 1. Remove the inheritance of text transform in Firefox.
+	 */
+
+	button,
+	select { /* 1 */
+	  text-transform: none;
+	}
+
+	/**
+	 * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+	 *    controls in Android 4.
+	 * 2. Correct the inability to style clickable types in iOS and Safari.
+	 */
+
+	button,
+	html [type="button"], /* 1 */
+	[type="reset"],
+	[type="submit"] {
+	  -webkit-appearance: button; /* 2 */
+	}
+
+	/**
+	 * Remove the inner border and padding in Firefox.
+	 */
+
+	button::-moz-focus-inner,
+	[type="button"]::-moz-focus-inner,
+	[type="reset"]::-moz-focus-inner,
+	[type="submit"]::-moz-focus-inner {
+	  border-style: none;
+	  padding: 0;
+	}
+
+	/**
+	 * Restore the focus styles unset by the previous rule.
+	 */
+
+	button:-moz-focusring,
+	[type="button"]:-moz-focusring,
+	[type="reset"]:-moz-focusring,
+	[type="submit"]:-moz-focusring {
+	  outline: 1px dotted ButtonText;
+	}
+
+	/**
+	 * Change the border, margin, and padding in all browsers (opinionated).
+	 */
+
+	fieldset {
+	  border: 1px solid #c0c0c0;
+	  margin: 0 2px;
+	  padding: 0.35em 0.625em 0.75em;
+	}
+
+	/**
+	 * 1. Correct the text wrapping in Edge and IE.
+	 * 2. Correct the color inheritance from `fieldset` elements in IE.
+	 * 3. Remove the padding so developers are not caught out when they zero out
+	 *    `fieldset` elements in all browsers.
+	 */
+
+	legend {
+	  box-sizing: border-box; /* 1 */
+	  color: inherit; /* 2 */
+	  display: table; /* 1 */
+	  max-width: 100%; /* 1 */
+	  padding: 0; /* 3 */
+	  white-space: normal; /* 1 */
+	}
+
+	/**
+	 * Remove the default vertical scrollbar in IE.
+	 */
+
+	textarea {
+	  overflow: auto;
+	}
+
+	/**
+	 * 1. Add the correct box sizing in IE 10-.
+	 * 2. Remove the padding in IE 10-.
+	 */
+
+	[type="checkbox"],
+	[type="radio"] {
+	  box-sizing: border-box; /* 1 */
+	  padding: 0; /* 2 */
+	}
+
+	/**
+	 * Correct the cursor style of increment and decrement buttons in Chrome.
+	 */
+
+	[type="number"]::-webkit-inner-spin-button,
+	[type="number"]::-webkit-outer-spin-button {
+	  height: auto;
+	}
+
+	/**
+	 * 1. Correct the odd appearance in Chrome and Safari.
+	 * 2. Correct the outline style in Safari.
+	 */
+
+	[type="search"] {
+	  -webkit-appearance: textfield; /* 1 */
+	  outline-offset: -2px; /* 2 */
+	}
+
+	/**
+	 * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+	 */
+
+	[type="search"]::-webkit-search-cancel-button,
+	[type="search"]::-webkit-search-decoration {
+	  -webkit-appearance: none;
+	}
+
+	/**
+	 * Correct the text style of placeholders in Chrome, Edge, and Safari.
+	 */
+
+	::-webkit-input-placeholder {
+	  color: inherit;
+	  opacity: 0.54;
+	}
+
+	/**
+	 * 1. Correct the inability to style clickable types in iOS and Safari.
+	 * 2. Change font properties to `inherit` in Safari.
+	 */
+
+	::-webkit-file-upload-button {
+	  -webkit-appearance: button; /* 1 */
+	  font: inherit; /* 2 */
+	}
+
+	/*NORMALIZE ENDS*/
+</style>
+
+<style>	
+	/*OUR OWN CSS*/
 	/*i can do this as an external page later if you guys prefer - this way is better for quick edits i think. 
 						also: the colors are sourced from the image ryan posted on github. */
 	/*COLOR PALETTE FROM PICTACULOUS.COM
@@ -56,7 +475,7 @@ Linked(supposedly) to the lectures.html page
 	header img{
 		margin:0;
 		padding:5px 0px;
-		width:20%;
+		width:18%;
 		height:60px;
 		opacity:0.9;
 		margin-left:15%;
@@ -70,7 +489,6 @@ Linked(supposedly) to the lectures.html page
 		width:100%;
 		 
 		background-color:#919EAE;
-		font-size:90%;
 		font-family:arial,sans-serif;
 		
 		padding:0;
@@ -104,7 +522,6 @@ Linked(supposedly) to the lectures.html page
 	main p{
 		font-size:1.2em;
 		margin:20px;
-		padding:20px;
 	}
 	
 	ul {
@@ -115,15 +532,34 @@ Linked(supposedly) to the lectures.html page
 	}
 	#center-col{
 		margin-left:15%;
-		margin-top:60px;
-		padding:10px 5px;
+		padding: 60px 20px 100px 20px;
 		width:70%;
 		
 		background-color:azure;
 	}
 	
-	#center-col h2{
+	#center-col p{
+		padding-bottom:15px;
+	}
+	
+	#center-col ul{
+		list-style-type:circle;
+		list-style-position: inside;
+	}
+	
+	#center-col h2, h6{
 		text-align:center;
+	}
+	
+	#center-col h6{
+		color:#06a0f9;
+		font-size:1.5em;
+		font-weight:700;
+		padding:8px 10px;
+		background-image:url("tech-background.jpg");
+	}
+	#center-col textarea{
+		margin-left:5%;
 	}
 	
 	#left-col{
@@ -165,31 +601,47 @@ Linked(supposedly) to the lectures.html page
 
 	#right-col #myNavbar .nav-pills li a{ 
 		padding:10px 5px;
-		font-size:1.05em;
+		font-size:0.9em;
 		text-align:center;
 	}
 	#left-col #final{
 		border-bottom:none;
 	}
 	
+	#left-col #active{
+		background-color:darkgray;
+		color:lightblue;
+	}
+	
+	#left-col .lab{
+		padding-top:20px;
+	}
 	
 </style>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="0">
+<body data-spy="scroll" data-target=".navbar" data-offset="30">
 	<header>
 		<img src="logo.png"/>
 	</header>
 	<main>
 		<!--column 2-->
 		<div id="left-col">
-			<h4>Lectures</h4>
 			<aside>
+			<h4>Lectures</h4>
 				<ul>
-					<li id="active"><a href="">HTML5</a> </li>
+					<li><a href="lecture.html">HTML5</a> </li>
 					<li><a href="">Introduction to CSS3</a></li>
 					<li><a href="">CSS3 Techniques</a></li>
 					<li><a href="">Responsive Design </a></li>
 					<li id="final"><a href="">JavaScript</a> </li>
+				</ul>
+			</aside>
+			
+			<aside class="lab">
+			<h4>Lab Excercises</h4>
+				<ul>
+					<li><a href="lab-ex.html">Lab Excercise #1</a> </li>
+					<li id="final"><a href="lab-ex.html#section2">Lab Excercise #2</a> </li>
 				</ul>
 			</aside>
 		</div>
@@ -207,27 +659,66 @@ Linked(supposedly) to the lectures.html page
 					<div>
 						<div class="collapse navbar-collapse" id="myNavbar">
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#section1">Section 1</a>
-								</li>
-								<li><a href="#section2">Section 2</a>
-								</li>
-								<li><a href="#section3">Section 3</a>
-								</li>
+								<li><a href="#section1">Lab Excercise #1</a></li>
+								<li><a href="#section2">Lab Excercise #2</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 		</nav>
 			
-			<div id="center-col">
+		<div id="center-col">
 			<!--column 1-->
-			<h2 id="section1">column 1: central content</h2>
-				<p class="container-fluid">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-				
-				<p id="section2" class="container-fluid">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-				
-				<p id="section3" class="container-fluid">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-					</div>
+			<h2 id="section1">Lab Excercises: HTML5</h2>
+			<p class="container-fluid">
+				<h6>Lab Excercise #1</h6>
+				Thinking about the semantic tags that are available in HTML5, construct a simple page that takes advantage of some of these tags.
+				<br>We will use the theme of craft beer. Create the name of your own brewery and find <a href="https://www.google.com/search?site=&amp;tbm=isch&amp;tbm=isch&amp;q=craft+beer">an image or two of beer</a> from the interwebs.
+
+				<br>The goal is to create a page <em>quickly</em> that contains the following:
+
+				<ul>
+				  <li>Name of your brewery</li>
+				  <li>A description of your brewery (20 words or so)</li>
+				  <li>A list of three beers, which should include:
+					<ul>
+					  <li>Beer name</li>
+					  <li>Beer style (IPA, Pilsner, Stout, Pale Ale, etc)</li>
+					  <li>Image</li>
+					  <li>Description</li>
+					</ul>
+				  </li>
+				  <li>Links to three pages (You don't have to create the pages if you don't want - just the links)
+					<ul>
+					  <li>About</li>
+					  <li>Brewery Tour</li>
+					  <li>Contact</li>
+					</ul>
+				  </li>
+				  <li>Additional content: 
+					<ul>
+					  <li>Links to twitter, facebook and rss (doesn't have to go anywhere, just create the links)</li>
+					  <li>Copyright year and name</li>
+					  <li>Link to email</li>
+					 
+					</ul>
+				  </li>
+				</ul>
+
+				<br>Your layout can be static flow, it doesn't have to be anything special, this is more about using HTML5 tags to maximize semantics than it is making it look pretty.
+
+				<br>If you'd like, you can use the <a href="/_shared_resources_1950/downloads/session02_exercise01.zip">HTML5 exercise starting files</a> to save you time.
+
+				<br>There are many ways to solve this challenge, but heres a <a href="/_shared_resources_1950/downloads/session02_exercise01_sample.zip">sample solution</a>.
+			</p>
+			
+			<p id="section2" class="container-fluid">
+				<h6>Lab Excercise #2</h6>
+				Experiment with new HTML5 form features.
+				<br><a href="/_shared_resources_1950/downloads/session02_exercise02.zip">Download and unpack the exercise files</a>  (.zip).  Add several of the new HTML5 inputs to the form. Test the results in every browser you have available. Which features seem to be well supported? Which ones are poorly supported? Take note of how a browser will render some of the more specialized inputs when it doesnt recognize the HTML5.
+			</p>
+
+		</div>
 		<!--column 1 end-->
 	</main>
 	<footer>
@@ -254,7 +745,7 @@ Linked(supposedly) to the lectures.html page
 					height:'40px'
 				},300);
 				$('header img').stop().animate({
-					width:'12%',
+					width:'11%',
 					height:'100%'
 				},200);
 			}
@@ -268,7 +759,7 @@ Linked(supposedly) to the lectures.html page
 					height:'60px'
 				},300);
 				$('header img').stop().animate({
-					width:'20%',
+					width:'18%',
 					height:'auto'
 				},200);
 			}  
@@ -280,3 +771,4 @@ Linked(supposedly) to the lectures.html page
 </body>
 
 </html>
+
